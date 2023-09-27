@@ -1,15 +1,24 @@
+import kotlin.math.sqrt
+
 class TriangularPrism(
     private val side1: Double,
     private val side2: Double,
     private val side3: Double,
     private val h: Double,
 ): Triangle(side1,side2,side3){
+    init {
+        if(!isExist) throw IllegalArgumentException()
+    }
+    private val isExist: Boolean
+        get() = h>0
     override fun squareSurface(): Double? {
         return super.perimeter()?.times(h)
     }
 
     override fun squareBase(): Double? {
-        return super.square()
+        val p2 = super.perimeter()?.div(2)
+        return p2?.let { sqrt(it*(it-side1)*(it-side2)*(it-side3)) }
+
     }
 
     override fun height(): Double? {
@@ -30,7 +39,7 @@ class TriangularPrism(
     }
 
     override fun volume(): Double? {
-        return super.square()?.times(h)
+        return squareBase()?.times(h)
     }
 
     override fun toString(): String {

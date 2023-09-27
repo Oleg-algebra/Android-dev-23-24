@@ -1,6 +1,11 @@
 import kotlin.math.PI
 
 open class Circle(private val  radius: Double) : Shape(){
+    init {
+        if (!isExist) throw IllegalArgumentException()
+    }
+    private val isExist: Boolean
+        get() = radius>0
     override fun dimension(): Int = 2
 
     override fun perimeter(): Double? = 2 * PI * radius

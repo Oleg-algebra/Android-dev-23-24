@@ -3,6 +3,12 @@ class RectangularParallelepiped(
     private val side2: Double,
     private val h: Double,
 ) :Rectangle(side1,side2){
+    init {
+        if (!isExist) throw IllegalArgumentException()
+    }
+
+    private val isExist: Boolean
+        get() = side1>0 && side2>0 && h>0
     override fun dimension(): Int = 3
 
     override fun perimeter(): Double? = null
