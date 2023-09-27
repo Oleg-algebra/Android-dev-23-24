@@ -56,4 +56,4 @@
    ==============src\resourses\input03.txt=============== \
    Incorrect parameters amount: 184 \
    2D figure with max square: Trapeze(base1=11.0, base2=14.0, lateral1=15.0, lateral2=20.0) \
-   3D figure with max volume: Ball(radius=25.0) \
+   3D figure with max volume: Ball(radius=25.0)
