@@ -43,3 +43,17 @@
     Triangle – Трикутник, Rectangle – Прямокутник, Trapeze – Трапеція, Parallelogram – Паралелограм, 
     Circle – Круг, Ball – Куля, TriangularPyramid – Трикутна піраміда, QuadrangularPyramid – Чотирикутна піраміда, 
     RectangularParallelepiped - Прямокутний паралелепіпед, Cone – Конус, TriangularPrism – Трикутна призма.
+
+3. Відповіді до задачі:
+   ==============src\resourses\input01.txt===============\
+   Incorrect parameters amount: 19 \
+   2D figure with max square: Trapeze(base1=6.0, base2=15.0, lateral1=20.0, lateral2=7.0) \
+   3D figure with max volume: Ball(radius=25.0) \
+   ==============src\resourses\input02.txt=============== \
+   Incorrect parameters amount: 95 \
+   2D figure with max square: Trapeze(base1=8.0, base2=8.0, lateral1=18.0, lateral2=18.0) \
+   3D figure with max volume: Ball(radius=25.0) \
+   ==============src\resourses\input03.txt=============== \
+   Incorrect parameters amount: 184 \
+   2D figure with max square: Trapeze(base1=11.0, base2=14.0, lateral1=15.0, lateral2=20.0) \
+   3D figure with max volume: Ball(radius=25.0) \
