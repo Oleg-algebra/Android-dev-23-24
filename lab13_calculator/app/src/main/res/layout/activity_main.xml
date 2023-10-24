@@ -61,6 +61,7 @@
                 android:id="@+id/left_parentheses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:tag="input"
                 android:layout_weight="1"
                 android:text="(" />
 
@@ -295,8 +296,9 @@
                 android:id="@+id/point"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:tag="input"
                 android:layout_weight="1"
-                android:text="," />
+                android:text="." />
 
             <Button
                 android:id="@+id/equal"

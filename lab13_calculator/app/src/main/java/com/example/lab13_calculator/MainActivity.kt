@@ -2,59 +2,32 @@ package com.example.lab13_calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import org.mariuszgromada.math.mxparser.Expression
+import org.mariuszgromada.math.mxparser.License
+import java.io.File
 
 class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var textView: TextView
-    val maxLength = 13
-    var currentOperation = ""
-    var number1 = Double.MAX_VALUE
-    var number2 = Double.MAX_VALUE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.textView)
         textView.text = "0"
+        val layout1 = findViewById<LinearLayout>(R.id.linearLayout2).touchables
 
-        val listOfButtons = listOf<View>(
-            findViewById(R.id.num_0),
-            findViewById(R.id.num_1),
-            findViewById(R.id.num_2),
-            findViewById(R.id.num_3),
-            findViewById(R.id.num_4),
-            findViewById(R.id.num_5),
-            findViewById(R.id.num_6),
-            findViewById(R.id.num_7),
-            findViewById(R.id.num_8),
-            findViewById(R.id.num_9),
-            findViewById(R.id.clear_all),
-            findViewById(R.id.delete),
-            findViewById(R.id.pi),
-            findViewById(R.id.point),
-            findViewById(R.id.procents),
-            findViewById(R.id.add),
-            findViewById(R.id.substract),
-            findViewById(R.id.division),
-            findViewById(R.id.multyplication),
-            findViewById(R.id.equal),
-            findViewById(R.id.e),
-            findViewById(R.id.sin),
-            findViewById(R.id.cos),
-            findViewById(R.id.tan),
-            findViewById(R.id.left_parentheses),
-            findViewById(R.id.right_parentheses),
-            findViewById(R.id.lg),
-            findViewById(R.id.ln),
-            findViewById(R.id.sqrt),
-            findViewById(R.id.pow),
-        )
-        for( btn in listOfButtons){
+        Log.d("1111",License.iConfirmNonCommercialUse("Oleh").toString())
+        Log.d("1111",License.checkIfUseTypeConfirmed().toString())
+        Log.d("1111",License.getUseTypeConfirmationMessage())
+
+        for( btn in layout1){
             btn.setOnClickListener(this)
         }
     }
@@ -65,13 +38,18 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 var currentText = textView.text.toString()
 
                 if (currentText == "0" || currentText == "NaN"){
-                    var newText = it.text.toString()
+                    var newText = if(it.text.toString() == "."){
+                        "$currentText."
+                    }else{
+                        it.text.toString()
+                    }
+
                     if (it.tag.toString() == "operator"){
                         newText+="("
                     }
                     textView.text = newText
                 }else {
-                    val operaitons = listOf("+","-","*","/")
+                    val operaitons = listOf("+","-","*","/",".")
                     if(currentText.last().toString() in operaitons && it.text.toString() in operaitons){
                         currentText = currentText.substring(0,currentText.length-1)
                     }
@@ -102,9 +80,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
                     "AC" -> {
                         textView.text = "0";
-                        currentOperation = "";
-                        number1 = Double.MAX_VALUE
-                        number2 = Double.MAX_VALUE
                     }
 
                     "%" -> {
@@ -113,12 +88,21 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                     }
                     "=" ->{
                         val res = Expression(textView.text.toString()).calculate()
-                        textView.text = res.toString()
+                        val res_int = res.toInt()
+
+                        textView.text = if(res - res_int == 0.0){
+                            res_int.toString()
+                        }else{
+                            res.toString()
+                        }
+
                     }
                 }
             }
         }
     }
+
+
 
     override fun onClick(btn: View?) {
         btn?.let {
