@@ -143,6 +143,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                             val newText = textView.text.toString() + storedNumber
                             textView.text = newText
                         }
+                        if( textView.text.toString() == "0"){
+                            textView.text = storedNumber
+                        }
 
                     }
 
