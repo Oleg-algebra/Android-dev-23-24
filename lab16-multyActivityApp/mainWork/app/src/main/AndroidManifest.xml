@@ -13,12 +13,6 @@
         android:theme="@style/Theme.CVApplication"
         tools:targetApi="31">
         <activity
-            android:name=".CallNumber"
-            android:exported="false" />
-        <activity
-            android:name=".EmailActivity"
-            android:exported="false" />
-        <activity
             android:name=".PhotoViewsActivity"
             android:exported="false" />
         <activity

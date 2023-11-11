@@ -1,3 +1,76 @@
 <resources>
     <string name="app_name">CV-Application</string>
+    <string name="number">098-777-6633</string>
+    <string name="email">john.coder@email.com </string>
+    <string name="meetingInvitaion">Розробка програмних продуктів \n
+                                Пʼятниця, 10 листопада · 10:35 – 12:10 \n
+                                Часовий пояс: Europe/Kiev \n
+                                Інформація для приєднання до зустрічі Google Meet \n
+                                Посилання на відеодзвінок:  \n
+                                https://meet.google.com/hzp-beaw-rxm</string>
+    <string name="shortCV"> <b>John A. Coder</b> \n
+        Contact Information \n
+        Address: 123 Main Street, Cityville, State, ZIP \n
+        Phone: 098-777-6633 \n
+        Email: john.coder@email.com \n
+        LinkedIn: linkedin.com/in/johncoder </string>
+    <string name="detailedCV"> <b>John A. Coder</b> \n
+Contact Information \n
+Address: 123 Main Street, Cityville, State, ZIP \n
+Phone: 098-777-6633 \n
+Email: john.coder@email.com \n
+LinkedIn: linkedin.com/in/johncoder \n\n\n
+Summary \n\n
+Results-driven software engineer with 10 years of experience in designing, developing,
+        and implementing innovative software solutions.
+        Proven track record of leading teams and delivering high-quality products.
+        Expertise in Java, Python, and web development technologies.
+\n\n\n
+Professional Experience\n\n
+Senior Software Engineer - Tech Innovators, Silicon Valley, CA (Jan 2018 – Present)\n
+Led a team of 5 developers in the successful delivery of a cloud-based analytics platform,
+        resulting in a 20% increase in user engagement. \n\n
+Collaborated with stakeholders to gather requirements and translated business needs into technical specifications. \n
+Implemented DevOps best practices, reducing deployment time by 30%.\n\n
+Software Engineer - CodeCrafters, Seattle, WA (May 2013 – Dec 2017)\n\n
+Contributed significantly to the development of a machine learning module for a predictive analytics tool,
+        resulting in a 25% improvement in accuracy.\n\n
+Conducted code reviews, mentored junior developers, and implemented coding standards, improving overall team efficiency by 15%.\n
+Integrated a new database system, enhancing data retrieval speed by 40%.\n
+        \n
+        \n
+Technical Skills\n\n
+Programming Languages: Java, Python, JavaScript\n\n
+Technologies/Tools: Spring Boot, Django, React, Docker\n\n
+Database Systems: MySQL, MongoDB\n\n
+Version Control: Git\n\n
+Other Skills: Agile methodologies, DevOps practices\n
+        \n
+        \n
+Education\n\n
+Bachelor of Science in Computer Science, University of Techville, 2013\n
+        \n
+        \n
+Certifications\n
+        \n
+Certified Scrum Master (CSM)\n
+        \n
+        \n
+Projects\n\n
+Developed and deployed a microservices architecture
+        for a scalable e-commerce platform.\n\n
+Implemented a real-time chat application using WebSockets and React.\n
+        \n
+        \n
+Awards and Honors\n\n
+Tech Innovators Team Excellence Award (2019)\n
+        \n
+Professional Development\n\n
+Completed Udacity\'s DevOps Nanodegree program.\n\n
+Attended AWS re:Invent Conference (2018, 2020).\n
+        \n
+        \n
+References\n\n
+Available upon request.\n
+    </string>
 </resources>
