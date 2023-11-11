@@ -13,6 +13,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,9 +39,11 @@ class MainActivity : AppCompatActivity() {
 
         photo.setOnClickListener {
             val intent = Intent(this,PhotoViewsActivity::class.java)
+            Toast.makeText(this,"Photo clicked",Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
         email.setOnClickListener{
+            Toast.makeText(this,"Email clicked",Toast.LENGTH_SHORT).show()
             val intent = Intent(ACTION_SEND)
             intent.type = "message/rfc822"         //"message/rfc822"   "plain/text"
             intent.putExtra(Intent.EXTRA_EMAIL, arrayOf( getString(R.string.email)))
@@ -52,6 +55,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(mailer)
         }
         number.setOnClickListener{
+            Toast.makeText(this,"Number clicked",Toast.LENGTH_SHORT).show()
             val intent = Intent(ACTION_DIAL)
 
             intent.data = Uri.parse("tel:" + Uri.encode(getString(R.string.number)))
@@ -60,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         cvInfo.setOnClickListener{
+            Toast.makeText(this,"CV info clicked",Toast.LENGTH_SHORT).show()
             val intent = Intent(this,DetailedCVActivity::class.java)
             startActivity(intent)
         }
